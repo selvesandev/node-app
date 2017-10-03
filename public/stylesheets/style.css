@@ -29,3 +29,19 @@
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
     color: white;
 }
+
+.footer {
+    min-height: 200px;
+    margin-top: 100px;
+    background: #303030;
+    padding: 40px 0;
+    color:white;
+}
+.footer ul li {
+    list-style: none;
+    display: inline;
+}
+.footer ul li a{
+    color:white;
+    margin-right: 10px;
+}
