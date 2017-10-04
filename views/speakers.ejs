@@ -10,7 +10,27 @@
 
     <div class="row">
         <div class="col-sm-8">
-            
+
+            <% artists.forEach(function(item){ %>
+            <h3><%= item.title %></h3>
+            <span>
+            <small>with
+                <a href="/speakers/<%= item.shortname %>"><%= item.name %></a>
+            </small>
+            </span>
+
+
+            <% switch(page){
+                case 'artistList': %>
+            <p><%= item.summary%></p>
+            <% break; %>
+            <% case 'artistDetail': %>
+            <p><%- item.description%></p>
+            <% break; %>
+            <% }; %>
+
+            <% }) %>
+
         </div>
         <div class="col-sm-4">
 
@@ -20,7 +40,6 @@
 
         </div>
     </div>
-
 </div>
 
 <% include partials/templates/footer.ejs %>

@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
         myArtWork = myArtWork.concat(item.artwork);
     });
 
-    res.render('index', {title: 'Home', artwork: myArtWork, 'artists': myArtists});
+    res.render('index', {title: 'Home', artwork: myArtWork, 'artists': myArtists, page: 'Home'});
 });
 
 
@@ -24,7 +24,7 @@ router.get('/speakers', function (req, res, next) {
         myArtWork = myArtWork.concat(item.artwork);
     });
 
-    res.render('speakers', {title: 'Speakers', artwork: myArtWork, 'artists': myArtists});
+    res.render('speakers', {title: 'Speakers', artwork: myArtWork, 'artists': myArtists, page: 'artistList'});
 });
 
 
@@ -39,7 +39,7 @@ router.get('/speakers/:speakerId', function (req, res, next) {
         }
     });
 
-    res.render('speakers', {title: 'Speakers', artwork: myArtWork, artists: myArtists});
+    res.render('speakers', {title: 'Speakers', artwork: myArtWork, artists: myArtists, page: 'artistDetail'});
 });
 
 
