@@ -18,6 +18,7 @@
 .navbar-default {
     background: #303030;
     border: none;
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -35,13 +36,21 @@
     margin-top: 100px;
     background: #303030;
     padding: 40px 0;
-    color:white;
+    color: white;
 }
+
 .footer ul li {
     list-style: none;
     display: inline;
 }
-.footer ul li a{
-    color:white;
+
+.footer ul li a {
+    color: white;
     margin-right: 10px;
+}
+
+.speaker_home_page {
+    text-align: center;
+    background: #eee;
+    padding: 20px 0 40px 0;
 }
