@@ -3,8 +3,8 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var data = require('./data.json');
 
-var index = require('./routes/index');
 
 var app = express();
 
@@ -18,11 +18,21 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+
+
+//now the css of the public folder can be accessed with /css/style.css no need to specify the public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-var data = require('./data.json');
+
 app.locals.appdata = data;
-app.use('/', index);
+
+
+//with this the appdata will be available in the routes with req.app.get('appdata')
+app.set('appdata', data);
+app.use(require('./routes/index'));
+app.use(require('./routes/speakers'));
+app.use(require('./routes/feedback'));
+app.use(require('./routes/api'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
