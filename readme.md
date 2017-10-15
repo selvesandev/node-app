@@ -42,5 +42,10 @@ npm install --save reload
 
 ## Creating an API
 
+HTTP VERBS POST,DELETE,UPDATE,GET
 
 
+POST
+```terminal
+npm install --save body-parser
+```

@@ -9,18 +9,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h2>Post Your Feedback</h2>
+            <h2>Roux chat</h2>
             <hr>
 
-            <form action="" class="feedback-form">
+            <form action="" name="chatForm" class="feedback-form">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" class="name form-control" name="name">
-                </div>
-
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" class="title form-control" name="title">
                 </div>
 
                 <div class="form-group">
@@ -28,17 +23,15 @@
                     <textarea name="message" id="message" cols="30" rows="4" class="form-control"></textarea>
                 </div>
 
-                <input type="submit" class="btn btn-default">
+                <input value="Send" type="submit" class="btn btn-default">
             </form>
 
         </div>
         <div class="col-md-4">
-            <h2>Recent Feeds</h2>
-            <hr>
-            <div id="recent-feeds">
+            <div class="chat-box">
+                <p class="info">Begin chat ...</p>
 
             </div>
-
         </div>
     </div>
 </div>

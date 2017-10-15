@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon -e css,js,ejs,json --watch app ./bin/www --ignore feedback.json"
   },
   "dependencies": {
     "body-parser": "~1.18.2",

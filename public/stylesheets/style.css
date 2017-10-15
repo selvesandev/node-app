@@ -54,3 +54,14 @@
     background: #eee;
     padding: 20px 0 40px 0;
 }
+
+.chat-box {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-top: 70px;
+    min-height: 300px;
+}
+
+.chat-box p.info {
+    color: #999;
+}
