@@ -49,3 +49,42 @@ POST
 ```terminal
 npm install --save body-parser
 ```
+
+
+## Socket IO
+A piece of middleware that makes it easy to build real time application. There are two different part 
+of the socket.io
+* Server - One that will run in our express js server
+* Client - Will run in regular js 
+
+##### Install
+
+Server
+```terminal
+    npm install --save socket.io
+```
+
+```nodejs
+let io = require('socket.io')(server);
+io.on('connection', function (socket) {
+    //information about the socket is on socket
+    console.log('User connected');
+
+    socket.on('disconnect', function () {
+        console.log('User Disconnected');
+    })
+});    
+```
+Client
+```php
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+```
+
+```javascript
+//Emit Event from the client
+socket.emit('emit-event-name', {
+    uname: uname.value,
+    message: message.value
+});
+
+```

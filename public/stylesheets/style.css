@@ -65,3 +65,7 @@
 .chat-box p.info {
     color: #999;
 }
+
+.chat-text {
+    padding: 5px;
+}
